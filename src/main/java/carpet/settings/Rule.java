@@ -17,7 +17,8 @@ import java.lang.annotation.Target;
  * 
  * @deprecated Use {@link carpet.api.settings.Rule} instead
  */
-@Deprecated(forRemoval = true)
+// Temporary remove removal tag, in order to suppress warns of carpet.CarpetSettings
+//@Deprecated(forRemoval = true)
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Rule

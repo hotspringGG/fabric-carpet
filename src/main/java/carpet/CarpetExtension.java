@@ -4,6 +4,7 @@ import carpet.script.CarpetExpression;
 import carpet.api.settings.SettingsManager;
 import com.mojang.brigadier.CommandDispatcher;
 import net.minecraft.commands.CommandBuildContext;
+import net.minecraft.commands.CommandSource;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
@@ -50,7 +51,7 @@ public interface CarpetExtension
      *
      * Deprecated, Implement {@link CarpetExtension#registerCommands(CommandDispatcher, CommandBuildContext)}
      * 
-     * @param dispatcher The current {@link CommandSource<ServerCommandSource>} dispatcher 
+     * @param dispatcher The current {@link CommandSource <ServerCommandSource>} dispatcher
      *                   where you should register your commands
      * 
      */
@@ -74,7 +75,7 @@ public interface CarpetExtension
      * @deprecated Implement {@link #extensionSettingsManager()} instead
      */
     @Deprecated(forRemoval = true)
-    default carpet.settings.SettingsManager customSettingsManager() {return null;}
+    default carpet.api.settings.SettingsManager customSettingsManager() {return null;}
 
     /**
      * Provide your own custom settings manager managed in the same way as base /carpet

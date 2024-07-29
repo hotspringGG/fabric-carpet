@@ -30,15 +30,15 @@ import org.apache.commons.lang3.ClassUtils;
 
 /**
  * A Carpet rule parsed from a field, with its name, value, and other useful stuff.
- * 
  * It is used for the fields with the {@link Rule} annotation
  * when being parsed by {@link SettingsManager#parseSettingsClass(Class)}.
  *
  * @param <T> The field's (and rule's) type
  * @deprecated Use the type {@link CarpetRule} instead
  */
-@Deprecated(forRemoval = true) // to move to api.settings package and visibility to package private
+//@Deprecated(forRemoval = true) // to move to api.settings package and visibility to package private
 @SuppressWarnings("removal") // Gradle needs the explicit suppression
+// Temporary until the deprecation is removed
 public final class ParsedRule<T> implements CarpetRule<T>, Comparable<ParsedRule<?>> {
     private static final Map<Class<?>, FromStringConverter<?>> CONVERTER_MAP = Map.ofEntries(
             Map.entry(String.class, str -> str),
